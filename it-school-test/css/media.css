@@ -50,14 +50,12 @@
     margin: 0;
   }
   .main-header .header-buttons .header-btn {
-    padding: 35px 28px !important;
     font-size: 30px !important;
     width: auto;
     display: inline-block;
   }
   .main-header .header-buttons .header-btn:last-child {
     width: auto;
-    padding: 32px 98px !important;
   }
   .main-header .header-buttons .header-btn.blue-btn {
     margin-bottom: 50px;
@@ -316,6 +314,9 @@
   }
 }
 @media (max-width: 600px) {
+  .menu-fixed.menu-scroll {
+    display: none;
+  }
   .about {
     padding: 0;
   }
@@ -354,15 +355,15 @@
     font-size: 22px;
   }
   .main-header .header-container .header-buttons .header-btn {
-    width: 250px;
-    padding: 15px 20px !important;
+    padding: 15px!important;
+    font-size: 22px !important;
   }
   .main-header .header-container .header-buttons .header-btn.blue-btn {
     margin-bottom: 30px;
     margin-right: 0 !important;
   }
   .main-header .header-container .header-buttons .header-btn:last-child {
-    padding: 24px 20px !important;
+    padding: 15px !important;
   }
   .main-header .header-container .slogan {
     margin-top: 50px;

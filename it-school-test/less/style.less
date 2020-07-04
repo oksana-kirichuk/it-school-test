@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i&display=swap&subset=cyrillic');
 
+// reset styles
+
 html, body {
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
@@ -71,6 +73,12 @@ input[type="number"]::-webkit-inner-spin-button {
     }
 }
 
+.fa-chevron-down {
+    color: #fff;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
 // **** main code ****
 
 // fixed menu
@@ -105,10 +113,15 @@ input[type="number"]::-webkit-inner-spin-button {
             }
     
             .menu-logo-text {
+
+                .logo-title {
+                    font-size: 22px;
+                }
+
                 p {
-                    font-weight: bold;
-                    font-size: 14px;
+                    font-size: 12px;
                     color: #fff;
+                    padding-top: 5px;
                 }
             }
         }
@@ -137,7 +150,7 @@ input[type="number"]::-webkit-inner-spin-button {
     
                 a {
                     cursor: pointer;
-                    font-size: 18px;
+                    font-size: 16px;
                     color: #fff;
                     border-bottom: 2px solid transparent;
                     transition: all .3s ease;
@@ -146,11 +159,7 @@ input[type="number"]::-webkit-inner-spin-button {
                 &.drop-parent {
                     position: relative;
 
-                    span {
-                        color: #fff;
-                        font-size: 16px;
-                        margin-left: 5px;
-                    }
+                    
                 }
             }
         }
@@ -606,7 +615,7 @@ input[type="number"]::-webkit-inner-spin-button {
                 width: 12%;
                 right: 0;
                 height: 6px;
-                background-color: @mainColor;;
+                background-color: @mainColor;
                 margin-top: 4px;
                 cursor: pointer;
             }
@@ -1995,4 +2004,74 @@ footer {
 }
 
 
-  
+// dropdown
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    &.active {
+        .drop-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(10px);
+        }
+    }
+
+    .drop-btn {
+        color: #fff;
+        border-radius: 3px;
+        cursor: pointer;
+        display: inline-block;
+        box-sizing: border-box;
+        min-width: 100%;
+        background-image: url(../img/arrow.svg);
+        background-repeat: no-repeat;
+        background-size: 12px;
+        background-position: right 10px center;
+        user-select: none;
+    }
+
+    .drop-menu {
+        z-index: 100;
+        position: absolute;
+        left: 0;
+        top: 105%;
+        min-width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        background: #F6F6F6;
+        box-shadow: -5px 3px 30px 4px rgba(0, 0, 0, 0.36);
+        border-radius: 10px;
+        padding: 10px;
+
+        ul {
+            width: 100%;
+
+            li {
+                width: 93%;
+                
+                &:hover {
+                    background: rgba(75, 103, 177, 0.3) !important;
+                }
+          
+                &.active {
+                    color: #3f51b5 !important;
+                }
+
+                a {
+                    display: block;
+                    border-bottom: 1px solid #eee;
+                    padding: 10px 20px;
+                    white-space: nowrap;
+                    color: #3f51b5 !important;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 24px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}

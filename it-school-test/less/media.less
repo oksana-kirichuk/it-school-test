@@ -91,7 +91,6 @@
             margin: 0;
 
             .header-btn {
-                padding: 35px 28px !important;
                 font-size: 30px !important;
                 width: auto;
                 display: inline-block;
@@ -99,7 +98,6 @@
                 &:last-child {
                     width: auto;
                     width: auto;
-                    padding: 32px 98px !important
                 }
 
                 &.blue-btn {
@@ -584,6 +582,12 @@
 
 @media (max-width: 600px) {
 
+    .menu-fixed {
+        &.menu-scroll {
+            display: none;
+        }
+    }
+
     .about {
         padding: 0;
 
@@ -643,9 +647,8 @@
     
             .header-buttons {
                 .header-btn {
-                    width: 250px;
-                    padding: 15px 20px !important;
-                   
+                    padding: 15px!important;
+                    font-size: 22px !important;
 
                     &.blue-btn {
                         margin-bottom: 30px;
@@ -653,7 +656,8 @@
                     }
 
                     &:last-child {
-                        padding: 24px 20px !important;
+                        padding: 15px !important;
+
                     }
                 }
             }

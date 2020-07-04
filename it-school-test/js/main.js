@@ -124,7 +124,6 @@ document.addEventListener("DOMContentLoaded", ready);
 		  
       	if(!checkboxes[0].checked && !checkboxes[1].checked) {
 			checkboxes.forEach( elem => {
-			console.log(elem)
 			elem.classList.add('checkbox-invalid')
         }
         );
@@ -140,4 +139,17 @@ document.addEventListener("DOMContentLoaded", ready);
   	// send.addEventListener('click', evt => validateFrom(evt));
 })();
 
+// dropdown
+
+let dropdown = document.querySelector('.dropdown');
+let dropBtn = document.querySelector('.dropdown .drop-btn');
+
+dropBtn.addEventListener('click', function(e) {
+    dropdown.classList.toggle('active');
+});
+window.addEventListener('click', function (e) {
+	if (!(e.target.closest('.dropdown'))) {
+		dropdown.classList.remove('active');
+	}
+});
 

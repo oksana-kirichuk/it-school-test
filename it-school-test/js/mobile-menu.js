@@ -5,31 +5,6 @@ var $menuOpen = document.querySelectorAll('[data-menu-open]');
 var $menuClose = document.querySelectorAll('[data-menu-close]');
 var $dataMobile = document.querySelectorAll('[data-menu]');
 var $overlay = document.querySelector('.mobile-overlay');
-
-console.log($menuOpen);
-console.log($menuClose);
-
-// open menu with click on the icon and close
-
-// $dataMobile.forEach(function (element) {
-// 	element.addEventListener('click', function() {
-        
-//         var $selectorMenu = this.getAttribute('data-menu');
-
-// 		if ($selectorMenu === 'data-menu-close') {
-//             $overlay.classList.remove('active');
-//             document.querySelector('.mobile-menu').classList.remove('active');
-// 		} else {
-// 			$overlay.classList.add('active');
-// 			document.querySelector('.mobile-menu').classList.add('active');
-// 		}
-//     });
-// }); 
-
-
-
-// Andrey   
-
 var x1 = 0;
 var x2 = 0;
 var action = false;
@@ -70,7 +45,6 @@ function mouseMove(e) {
 }
 
 function moveMenu(distance) {
-    console.log(distance);
     if (distance <= 0) {
         $selector.style.cssText = 'visibility: hidden'
         $overlay.style.cssText = 'opacity: 0'
@@ -95,7 +69,6 @@ $menuOpen.forEach(function (el) {
     el.addEventListener('click', function () {
         savedPosition = menuLength;
         moveMenu(menuLength)
-        console.log('123')
     });
 });
 
