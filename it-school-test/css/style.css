@@ -24,6 +24,7 @@ h4,
 h5,
 h6,
 ul,
+ol,
 li,
 span,
 div,
@@ -655,7 +656,7 @@ footer .footer-container .footer-technologies .tech-items span {
   display: flex;
   margin-bottom: 20px;
 }
-.footer-block.social-icons span {
+.footer-block.social-icons a {
   color: #fff;
   font-size: 18px;
   margin-right: 20px;
